@@ -1,0 +1,17 @@
+#cellphone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+
+    #cell-title {
+        text-align: center;
+        color: #fff;
+        font-size: 3rem;
+    }
+
+    #img2, #img1, #img3 {
+        width: 500px;
+    }
+}

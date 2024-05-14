@@ -17,46 +17,54 @@ app.set('view engine', 'handlebars')
 const products = [
     {
         id: '1',
-        product: 'Celular',
-        brand: 'Iphone',
-        price: 'R$1.999',
-        imgpath: '/img/cell.png',
-        pagepath: ''
+        product: 'Moto G52',
+        brand: 'Motorola',
+        price: 'R$1.199',
+        imgPath: '/img/celulares/motog52.png',
+        cssId: 'img1'
     },
     {
         id: '2',
-        product: 'Celular',
-        brand: 'Iphone',
-        price: 'R$1.999',
-        imgpath: '/img/cell.png'
+        product: 'Iphone 11',
+        brand: 'Apple',
+        price: 'R$4.999',
+        imgPath: '/img/celulares/ios11.png',
+        cssId: 'img2'
     },
     {
         id: '3',
-        product: 'Celular',
-        brand: 'Iphone',
-        price: 'R$1.999',
-        imgpath: '/img/cell.png'
+        product: 'S23 Ultra',
+        brand: 'Samsung',
+        price: 'R$4.999',
+        imgPath: '/img/celulares/s23u.webp',
+        cssId: 'img3'
     }
 ]
 
 app.get('/products/:id', (req, res) => {
-    const id = req.params.id
+    const cellphone = products[req.params.id - 1]
 
-    res.render('products', { products, id })
+    res.render('productsview', { 
+        cssPath: '/css/cellphone/cellphone.min.css',
+        title: cellphone.product,
+        cellphone
+    })
 })
 
 app.get('/', (req, res) => {
-    res.render('home', { products })
+    
+    res.render('home', { 
+        cssPath: '/css/home/home.min.css',
+        title: 'Início',
+        products,
+     })
 })
 
-app.get('/about', (req, res) => {
-    // Simulando uma rota não encontrada
-    res.status(404).render('errorview');
-});
-
-// Middleware para lidar com rotas não encontradas
 app.use((req, res, next) => {
-    res.status(404).render('errorview');
+    res.status(404).render('errorview', {
+        title: '404 Error',
+        cssPath: '/css/error/error.min.css'
+    });
 });
 
 app.listen(port, () => {

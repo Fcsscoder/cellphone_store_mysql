@@ -1,9 +1,10 @@
-@media (max-width:1100px) {
+@media (max-width:1400px) {
     .products-container {
         flex-direction: column !important; 
+
         
         .products-control {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
     }
 }
@@ -15,12 +16,26 @@
         
         ul {
             gap: 40px;
-            justify-content: flex-end !important;
 
             li {
                 margin: 0 !important;
             }
         }
+    }
 
+    .products-container {
+        max-height: 400px !important;
     }
 }
+
+@media (min-width: 300px) and (max-width: 480px) {
+    #main-title {
+        font-size: 1.5rem !important;
+    }
+
+    .products-control {
+        max-width: 280px !important;
+        max-height: 580px !important;
+    }
+}
+
