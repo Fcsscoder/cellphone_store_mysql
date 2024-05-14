@@ -1,0 +1,68 @@
+@use './variables.scss';
+
+@import './addons.scss';
+
+.products-main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: #fff;
+
+    #main-title {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 3rem;
+    }
+
+    .products-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: 40px;
+        flex-direction: row;
+        
+        .products-control {
+            outline: 2px solid variables.$primary-color;
+            padding: 30px;
+            min-width: 300px;
+            min-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 8px; 
+            box-shadow: inset 0px -40px 80px variables.$primary-color, #965DE9 0px 2px 1px, #965DE9 0px 4px 2px, #955de960 0px 8px 4px, #8e2fb022 0px 16px 8px; ;
+
+            &:hover {
+                background-color: rgba(187, 0, 255, 0.16);
+                transition: 1s;
+            }
+            
+            img {
+                margin-top: 40px;
+                width: 150px;
+                filter: drop-shadow(9px 20px 10px rgba(0, 0, 0, 0.5));
+                width: 250px;
+            }
+
+            
+            .brand {
+                margin-top: 30px;
+            }
+            
+            .price {
+                font-size: 2.5rem;
+                margin-top: 20px;
+            }
+            
+            .link-button {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+// responsividade 
+
+

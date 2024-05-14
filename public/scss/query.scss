@@ -1,0 +1,26 @@
+@media (max-width:1100px) {
+    .products-container {
+        flex-direction: column !important; 
+        
+        .products-control {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    #nav-container {
+        justify-content: center;
+        position: static;
+        
+        ul {
+            gap: 40px;
+            justify-content: flex-end !important;
+
+            li {
+                margin: 0 !important;
+            }
+        }
+
+    }
+}
