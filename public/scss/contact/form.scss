@@ -1,0 +1,78 @@
+#form-container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    h1 {
+        color: #fff;
+        font-size: 2.5rem;
+    }
+
+    .form-control {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 300px;
+        flex-direction: column;
+        outline: 2px solid variables.$primary-color;
+        border-radius: 5px;
+        box-shadow:#965DE9 0px 2px 1px, #965DE9 0px 4px 2px, #955de960 0px 8px 4px, #8e2fb022 0px 16px 8px, inset 0px 0px 10px #965DE9, #965DE9 0px 2px 1px, #965DE9 0px 4px 2px;
+        background-color: variables.$secondary-color;
+        z-index: 999 !important;
+
+        input[type="email"] {
+            padding: 5px 10px;
+            width: 300px;
+            border-radius: 5px;
+            background-color: variables.$secondary-color;
+            outline: 2px solid variables.$primary-color;
+            border: 0;
+            color: #Fff;
+
+            &::placeholder {
+                color: variables.$primary-color;
+            }
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 5px 15px;
+            background-color: variables.$secondary-color;
+            border: 0;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+            outline: 2px solid variables.$primary-color;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: #965DE9 0px 0px 20px;
+            }
+        }
+
+        textarea {
+            margin-top: 40px;
+            padding: 5px 10px;
+            width: 300px;
+            height: 130px;
+            max-width: 350px;
+            max-height: 130px;
+            border-radius: 5px;
+            background-color: transparent;
+            outline: 2px solid variables.$primary-color;
+            border: 0;
+            color: #fff;
+
+            &::placeholder {
+                color: variables.$primary-color;
+            }
+        }
+    }
+}

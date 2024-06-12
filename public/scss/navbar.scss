@@ -1,14 +1,15 @@
-@use '../variables.scss';
+@use 'variables.scss' as variables;
 
 #nav-container {
+    z-index: 2;
     display: flex;
     justify-content: end;
     width: 100%;
     height: 60px;
     outline: 2px solid variables.$primary-color;
+    background-color: variables.$secondary-color;
     position: sticky;
     top: 0;
-    background: variables.$secondary-color;
 
     ul {
         display: flex;

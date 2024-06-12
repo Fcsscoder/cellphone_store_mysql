@@ -1,13 +1,10 @@
 @media (max-width:1400px) {
     .products-container {
         flex-direction: column !important; 
-
-        
-        .products-control {
-            margin-bottom: 60px;
-        }
     }
 }
+
+//navbar
 
 @media (max-width: 1000px) {
     #nav-container {
@@ -22,20 +19,25 @@
             }
         }
     }
-
-    .products-container {
-        max-height: 400px !important;
-    }
 }
+
+//home
 
 @media (min-width: 300px) and (max-width: 480px) {
-    #main-title {
-        font-size: 1.5rem !important;
+    .products-container {
+        margin-top: 40px;
+
+        .products-control {
+            max-width: 280px !important;
+            max-height: 580px !important;
+        }
     }
 
-    .products-control {
-        max-width: 280px !important;
-        max-height: 580px !important;
+    .offer-title {
+        font-size: 2rem;
+        margin-top: 30px;
     }
 }
+
+
 

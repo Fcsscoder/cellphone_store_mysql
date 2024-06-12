@@ -1,7 +1,8 @@
 @use '../variables.scss';
 
-@import './products.scss';
 @import '../navbar.scss';
+@import './form.scss';
+@import './addons.scss';
 @import './query.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -16,31 +17,8 @@
 
 body {
     background-color: variables.$secondary-color;
-}
-
-.main-container {
-    display: flex;
-    flex-direction: column !important;
-    color: #fff;
-}
-
-#container {
-    width: 100%;
     height: 100vh;
-    background-color: variables.$secondary-color;
-    margin-top: 50px;
+    overflow: hidden;
 }
 
-::-webkit-scrollbar {
-    width: 7px;  
-}
 
-::-webkit-scrollbar-track {
-    background: variables.$secondary-color; 
-    border-radius: 10px; 
-}
-
-::-webkit-scrollbar-thumb {
-    background: variables.$primary-color; 
-    border-radius: 10px; 
-}
