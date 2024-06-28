@@ -4,6 +4,8 @@ const { connect } = require('http2')
 const router = require('./routes/routes')
 const products = require('./products');
 
+const port = process.env.PORT || 3000
+
 const app = express()
 
 app.use(router)
@@ -33,4 +35,4 @@ app.use((req, res, next) => {
     });
 });
 
-app.listen(3000)
+app.listen(port)
