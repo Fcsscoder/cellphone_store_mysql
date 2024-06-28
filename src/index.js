@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars')
 const { connect } = require('http2')
 const router = require('./routes/routes')
 const products = require('./products');
+const path = require('path');
 
 const port = process.env.PORT || 3000
 
@@ -12,7 +13,11 @@ app.use(router)
 
 app.use(express.static(__dirname + '../../' + 'public'))
 
-app.engine('handlebars', exphbs.engine({
+const hbs = exphbs.create({
+    partialsDir: [path.join(__dirname, 'views', 'partials')]
+})
+
+app.engine('handlebars', hbs.engine({
     defaultLayout: "main",
     layoutsDir: path.join(__dirname, 'views', 'layouts')
 }))
