@@ -8,11 +8,7 @@ const app = express()
 
 app.use(router)
 
-const hbs = exphbs.create({
-    partialsDir: ['views/partials']
-})
-
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(__dirname + '../../' + 'public'))
 
 app.engine('handlebars', exphbs.engine({
     defaultLayout: "main",
