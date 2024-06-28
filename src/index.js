@@ -12,10 +12,14 @@ const hbs = exphbs.create({
     partialsDir: ['views/partials']
 })
 
-app.engine('handlebars', hbs.engine)
-app.set('view engine', 'handlebars')
+app.use(express.static(path.join(__dirname, 'public')))
 
-app.use(express.static('public'))
+app.engine('handlebars', exphbs.engine({
+    defaultLayout: "main",
+    layoutsDir: path.join(__dirname, 'views', 'layouts')
+}))
+app.set('view engine', 'handlebars')
+app.set('views', path.join(__dirname, 'views'))
 
 app.get('/', (req, res) => {
     res.render('home', { 
